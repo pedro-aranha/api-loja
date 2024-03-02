@@ -9,6 +9,7 @@ class apiLoja extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "sales_id";
     protected $fillable = [
         'sales_id',
         'amount',
