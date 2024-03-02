@@ -10,8 +10,11 @@ class apiLoja extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'price',
-        'description'
+        'sales_id',
+        'amount',
+        'products',
+        'products_id',
+        'nome',
+        'price'
     ];
 }

@@ -8,14 +8,12 @@ class apiLojaController extends Controller
 {
     public function index(){
         return apiLoja::all();
-
     }
 
-    public function store(Request $req){
+    public function store(Request $req){ 
         apiLoja::create([
-            "name" => $req->name,
-            "price" => $req->price,
-            "description" => $req->description
+            "amount" => $req->amount,
+            "products" => json_encode($req->products)
         ]);
 
         return response(["Information stored"], 200);
@@ -41,7 +39,7 @@ class apiLojaController extends Controller
         $return .= "successfully changed ";
         return response([$return], 200);
     }
-
+    
     public function delete(Request $req){
         $product = apiLoja::find($req->id);
             if($product){
