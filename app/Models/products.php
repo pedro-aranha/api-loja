@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class apiLoja extends Model
+class products extends Model
 {
     use HasFactory;
-
-    protected $primaryKey = "sales_id";
+    protected $primaryKey = "product_id";
     protected $fillable = [
-        'sales_id',
-        'amount',
-        'products',
-        'products_id',
+        'product_id',
         'name',
         'price',
         'description'

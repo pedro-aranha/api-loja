@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\apiLojaController;
+use App\Http\Controllers\productsController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,15 @@ Route::get('apiLoja/findbyid/{sales_id}',[apiLojaController::class,"getSpecific"
 Route::post('apiLoja',[apiLojaController::class,"store"]);
 
 //Update
-Route::put('apiLoja/{sales_id}',[apiLojaController::class,"update"]);
+Route::put('apiLoja',[apiLojaController::class,"update"]);
 
 //Cancel a sale
 Route::put('apiLoja/cancel/{sales_id}',[apiLojaController::class,"cancelSale"]);
 
 //Delete
 Route::delete('apiLoja/{sales_id}',[apiLojaController::class,"delete"]);
+
+//Products Routes
+//Index
+Route::get('apiLoja/products',[apiLojaController::class,"getProducts"]);
+
